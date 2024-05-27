@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ThreadPoolDesignPattern.cpp">
+    <ClCompile Include="ThreadPool1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

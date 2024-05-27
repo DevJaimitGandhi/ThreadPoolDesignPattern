@@ -103,7 +103,7 @@ ThreadPool::~ThreadPool()
 /*
 *   To demonstrate global function as a worker function, I have added here.
 */
-void globalWorkerFunction(int threadNumber)
+static void globalWorkerFunction(int threadNumber)
 {
     cout << "Executing globalWorkerFunction from thread number " << to_string(threadNumber) << "\n";
     std::this_thread::sleep_for(std::chrono::milliseconds(3000)); // Simulating some task using thread sleep.
@@ -112,12 +112,13 @@ void globalWorkerFunction(int threadNumber)
 /*
 *   To demonstrate function poinetr as a worker function, I have added here.
 */
-void funtionPointerFunction(int threadNumber)
+static void funtionPointerFunction(int threadNumber)
 {
     cout << "Executing funtionPointerFunction from thread number " << to_string(threadNumber) << "\n";
     std::this_thread::sleep_for(std::chrono::milliseconds(3000)); // Simulating some task using thread sleep.
 }
 
+#if 0
 int main()
 {
     ThreadPool pool(3);
@@ -144,3 +145,4 @@ int main()
     std::cout << "Done executing...\n";
 }
 
+#endif
